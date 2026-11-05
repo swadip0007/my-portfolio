@@ -1,3 +1,6 @@
+import Image from "next/image";
+
+
 type Project = {
   title: string;
   description: string;
@@ -219,90 +222,187 @@ export default async function Home() {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative mx-auto flex min-h-[82vh] max-w-6xl flex-col justify-center px-5 py-20 sm:px-8">
-        <div className="pointer-events-none absolute right-4 top-16 -z-10 h-80 w-80 rounded-full bg-cyan-500/15 blur-[120px]" />
-        <div className="pointer-events-none absolute -left-12 bottom-12 -z-10 h-72 w-72 rounded-full bg-blue-600/10 blur-[120px]" />
+    
+{/* Hero Section */}
+<section className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-5 py-16 sm:px-8 sm:py-20">
 
-        <div className="relative max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-medium text-cyan-300">
-            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-            Available for opportunities
-          </div>
+  {/* Background Glow */}
+  <div className="pointer-events-none absolute right-0 top-20 -z-10 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
+  <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 h-72 w-72 rounded-full bg-blue-600/10 blur-[120px]" />
 
-          <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-6xl md:text-7xl">
-            Hi, I&apos;m <span className="text-white">Swadip</span>.
-            <br />
-            I build modern <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-cyan-200 bg-clip-text text-transparent">web experiences.</span>
-          </h1>
+  <div className="grid w-full items-center gap-14 lg:grid-cols-[minmax(0,1fr)_380px]">
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg sm:leading-8">
-            Frontend developer specializing in building responsive,
-            production-ready web applications with Next.js, React, TypeScript, and Supabase.
+    {/* LEFT CONTENT */}
+    <div className="max-w-3xl">
+
+      {/* Availability Badge */}
+      <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-medium text-cyan-300">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-400" />
+        Available for opportunities
+      </div>
+
+      {/* Main Heading */}
+      <h1 className="text-4xl font-extrabold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+        Hi, I&apos;m{" "}
+        <span className="text-white">Swadip</span>.
+        <br />
+        I build modern{" "}
+        <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-cyan-200 bg-clip-text text-transparent">
+          web experiences.
+        </span>
+      </h1>
+
+      {/* Description */}
+      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-300 sm:text-lg">
+        Frontend developer specializing in building responsive,
+        production-ready web applications with Next.js, React,
+        TypeScript, and Supabase.
+      </p>
+
+      {/* Action Buttons */}
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+
+        <a
+          href="#fullstack"
+          className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3.5 text-sm font-bold text-black transition-all hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
+        >
+          Explore Projects ↓
+        </a>
+
+        <a
+          href="https://github.com/swadip0007"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-300"
+        >
+          GitHub Profile ↗
+        </a>
+
+        <a
+          href="#contact"
+          className="px-2 py-3 text-sm font-semibold text-gray-300 transition-colors hover:text-cyan-300"
+        >
+          Get in Touch →
+        </a>
+
+      </div>
+
+      {/* Technologies */}
+      <div className="mt-12">
+
+        <p className="mb-5 font-mono text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
+          Technologies I Work With
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+
+          {[
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "Advanced JavaScript",
+            "React.js",
+            "Next.js",
+            "Supabase",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="rounded-xl border border-cyan-400/25 bg-cyan-400/[0.08] px-4 py-2.5 text-sm font-semibold text-cyan-200 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-cyan-400/20 hover:text-white"
+            >
+              {tech}
+            </span>
+          ))}
+
+        </div>
+      </div>
+
+    </div>
+
+    {/* RIGHT PROFILE IMAGE */}
+    <div className="relative mx-auto w-full max-w-[340px] lg:max-w-[380px]">
+
+      {/* Outer Glow */}
+      <div className="absolute -inset-4 rounded-[35px] bg-gradient-to-br from-cyan-400/30 via-sky-500/10 to-blue-600/30 opacity-80 blur-2xl" />
+
+      {/* Image Card */}
+      <div className="group relative aspect-[4/5] overflow-hidden rounded-[30px] border border-cyan-300/30 bg-[#0c1727] shadow-[0_20px_70px_-25px_rgba(34,211,238,0.35)]">
+
+        <Image
+          src="/images/swadip-profile.png"
+          alt="Swadip Patra - Developer"
+          fill
+          priority
+          sizes="(max-width: 768px) 85vw, 380px"
+          className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* Bottom Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080b12]/90 via-transparent to-transparent" />
+
+        {/* Profile Information */}
+        <div className="absolute bottom-0 left-0 z-10 w-full p-6">
+
+          <p className="text-2xl font-bold tracking-tight text-white">
+            Swadip Patra
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="#fullstack"
-              className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-black transition-all hover:bg-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-            >
-              Explore Projects
-              <span aria-hidden="true">↓</span>
-            </a>
+          <p className="mt-2 text-sm font-medium text-cyan-300">
+            Frontend  Developer
+          </p>
 
-            <a
-              href="https://github.com/swadip0007"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition-all hover:border-cyan-400 hover:text-cyan-300"
-            >
-              GitHub Profile
-              <span aria-hidden="true">↗</span>
-            </a>
+          <div className="mt-4 h-1 w-14 rounded-full bg-cyan-400" />
 
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-xl border border-transparent px-5 py-3 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-            >
-              Get in Touch →
-            </a>
-          </div>
-
-          <div className="mt-12 flex flex-wrap items-center gap-3 text-xs text-gray-300">
-            <span className="font-mono text-gray-400">STACK:</span>
-            {["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Advance Js"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1 font-medium text-gray-300"
-                >
-                  {tech}
-                </span>
-              )
-            )}
-          </div>
         </div>
-      </section>
+
+      </div>
+
+      {/* Image Caption */}
+      <p className="mt-6 text-center font-mono text-[11px] tracking-[0.2em] text-cyan-300/80">
+        DEVELOPER  • PROBLEM SOLVER  • EXPLORER    </p>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Main Content Area */}
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* About Section */}
         <section id="about" className="scroll-mt-24 border-t border-white/10 py-16 md:py-20">
-          <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">
-            About Me
-          </p>
+          
+<div className="relative">
+  <p className="mb-3 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400">
+    <span className="h-px w-8 bg-cyan-400" />
+    About Me
+    <span className="text-gray-500">/ 01</span>
+  </p>
 
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Turning ideas into functional, elegant software.
-          </h2>
+  <h2 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+    Crafting Digital
+    <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+      Experiences That
+    </span>
+    Inspire & Engage.
+  </h2>
 
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-300 md:text-lg md:leading-8">
-            I am a passionate web developer focused on crafting clean interfaces, robust backend
-            architectures, and intuitive user experiences. Whether developing full-stack database
-            applications, consuming complex REST APIs, or creating pixel-perfect responsive layouts,
-            I prioritize maintainability, performance, and best practices.
-          </p>
+  <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 md:text-lg">
+    I'm a Frontend Developer passionate about transforming creative ideas
+    into engaging digital experiences. I specialize in building sleek,
+    responsive interfaces, bringing designs to life with smooth interactions,
+    thoughtful details, and clean, maintainable code.
+  </p>
 
+  <div className="mt-6 flex flex-wrap gap-3">
+    {["Frontend Development", "Responsive Design", "API Integration"].map((item) => (
+      <span
+        key={item}
+        className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium text-gray-300 transition-all duration-300 hover:border-cyan-400/50 hover:text-cyan-400"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
               <div className="mb-3 font-mono text-xl text-cyan-400">01</div>
