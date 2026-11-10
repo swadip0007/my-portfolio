@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactActions from "@/components/ContactActions";
 
 
 type Project = {
@@ -464,23 +465,8 @@ export default async function Home() {
               Feel free to reach out via email or connect with me on GitHub.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="mailto:swadippatra@gmail.com"
-                className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-black transition-all hover:bg-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-              >
-                Send Email ↗
-              </a>
+            <ContactActions email="swadippatra@gmail.com" githubUrl="https://github.com/swadip0007" />
 
-              <a
-                href="https://github.com/swadip0007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition-all hover:border-cyan-400 hover:text-cyan-300"
-              >
-                Connect on GitHub ↗
-              </a>
-            </div>
           </div>
         </section>
 
