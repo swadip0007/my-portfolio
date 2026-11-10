@@ -358,7 +358,7 @@ export default async function Home() {
 
       {/* Image Caption */}
       <p className="mt-6 text-center font-mono text-[11px] tracking-[0.2em] text-cyan-300/80">
-        DEVELOPER  • PROBLEM SOLVER  • EXPLORER    </p>
+        DEVELOPER  • CREATIVE  • EXPLORER    </p>
 
     </div>
 
@@ -466,7 +466,7 @@ export default async function Home() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="mailto:swadippatra0007@gmail.com"
+                href="mailto:swadippatra@gmail.com"
                 className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-black transition-all hover:bg-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
               >
                 Send Email ↗
